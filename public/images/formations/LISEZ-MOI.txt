@@ -1,0 +1,22 @@
+DEPOSEZ ICI LES IMAGES DES FORMATIONS
+=====================================
+
+Une image par formation, nommee avec l'identifiant de la formation :
+
+    leapfrog-geo.webp
+    acp-rstudio.webp
+    geovia-surpac.webp
+    ...
+
+Formats acceptes, par ordre de preference : .avif  .webp  .jpg  .jpeg  .png
+Format attendu : 16:9 paysage, 1600 x 900 pixels, moins de 200 Ko.
+
+Les 18 prompts a coller dans votre generateur d'images sont dans :
+
+    docs/prompts-images-ia.md
+
+Apres avoir depose les fichiers :
+
+    npm run build
+
+Le build liste les images encore manquantes a chaque execution.

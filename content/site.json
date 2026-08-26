@@ -1,0 +1,89 @@
+{
+  "nom": "CSA",
+  "nomComplet": "Consulting Sciences Academy",
+  "slogan": "Former pour Transformer l'Afrique",
+  "sousTitre": "Formation • Conseil • Recherche • Innovation",
+  "baseline": "Science • Mines • Environnement • Données • Intelligence Artificielle",
+  "email": "c.s.academique@gmail.com",
+  "whatsapp": "237672442598",
+  "whatsappAffiche": "+237 672 442 598",
+  "pays": "Cameroun",
+  "domaine": "",
+  "urlFormulaire": "REMPLACER_PAR_URL_APPS_SCRIPT",
+  "piliers": [
+    {
+      "icone": "🎓",
+      "titre": "Formation",
+      "texte": "Programmes certifiants, masterclass techniques et conférences gratuites, sur les logiciels et les méthodes réellement utilisés en entreprise."
+    },
+    {
+      "icone": "🧭",
+      "titre": "Conseil",
+      "texte": "Conseil scientifique et technique aux compagnies minières, bureaux d'études, laboratoires et services géologiques."
+    },
+    {
+      "icone": "🔬",
+      "titre": "Recherche appliquée",
+      "texte": "Accompagnement de mémoires et de projets de recherche, traitement de données géologiques, études de cas africaines."
+    },
+    {
+      "icone": "💡",
+      "titre": "Innovation numérique",
+      "texte": "Solutions d'IA pour l'exploration, automatisation des traitements de données et cartographie environnementale."
+    }
+  ],
+  "chiffres": [
+    {
+      "valeur": "57",
+      "libelle": "professionnels formés en présentiel",
+      "detail": "19 à Pépite d'Or + 38 à Bafoussam"
+    },
+    {
+      "valeur": "5",
+      "libelle": "établissements clients",
+      "detail": "Pépite d'Or + 4 établissements de Bafoussam"
+    },
+    {
+      "valeur": "18",
+      "libelle": "formations au catalogue",
+      "detail": "géostatistique, logiciels miniers, SIG, environnement, données et IA"
+    },
+    {
+      "valeur": "161",
+      "libelle": "membres dans notre communauté",
+      "detail": "Afrique francophone"
+    }
+  ],
+  "paysFormulaire": [
+    "Cameroun",
+    "Côte d'Ivoire",
+    "Gabon",
+    "Burkina Faso",
+    "RD Congo",
+    "Mali",
+    "Sénégal",
+    "Guinée",
+    "Niger",
+    "Ghana",
+    "Nigeria",
+    "Congo",
+    "Togo",
+    "Bénin",
+    "Tchad",
+    "Centrafrique",
+    "Autre"
+  ],
+  "profilsFormulaire": [
+    "Géologue",
+    "Ingénieur des mines",
+    "Géophysicien",
+    "Environnementaliste",
+    "Géographe / SIG",
+    "Data analyst",
+    "Enseignant / chercheur",
+    "Étudiant / doctorant",
+    "Direction d'établissement",
+    "Agent d'administration",
+    "Autre"
+  ]
+}

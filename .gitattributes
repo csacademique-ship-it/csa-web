@@ -1,0 +1,18 @@
+# Normalisation des fins de ligne.
+# Windows utilise CRLF, Linux et les serveurs utilisent LF.
+# Sans ce fichier, Git signale des milliers de lignes modifiees a chaque
+# enregistrement, alors que rien n'a change dans le texte.
+# Regle : dans le depot, tout est en LF. Sur votre disque, Git s'adapte.
+
+* text=auto eol=lf
+
+# Fichiers binaires : ne jamais y toucher.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary

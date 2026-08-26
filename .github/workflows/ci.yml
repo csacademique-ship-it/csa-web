@@ -1,0 +1,34 @@
+name: Build et controles
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Aucune dependance a installer : le projet n'en a pas.
+      - name: Construire le site
+        run: npm run build
+
+      - name: Controles HTML, liens et regles metier
+        run: npm run check
+
+      - name: Tests unitaires
+        run: npm test
+
+      - name: Publier le site construit
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist/
+          retention-days: 14

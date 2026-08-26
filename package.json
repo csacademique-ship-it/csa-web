@@ -1,0 +1,23 @@
+{
+  "name": "csa-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine et tunnel de vente de CSA — Consulting Sciences Academy",
+  "type": "module",
+  "license": "UNLICENSED",
+  "author": "CSA — Consulting Sciences Academy <c.s.academique@gmail.com>",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node src/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test",
+    "verify": "npm run build && npm run check && npm test",
+    "nouvelle-formation": "node scripts/nouvelle-formation.mjs",
+    "clean": "node -e \"import('node:fs').then(f=>f.rmSync('dist',{recursive:true,force:true}))\""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

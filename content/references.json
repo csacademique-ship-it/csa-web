@@ -1,0 +1,18 @@
+[
+  {
+    "nom": "Complexe Bilingue École Pépite d'Or",
+    "lieu": "Yaoundé, Cameroun",
+    "mission": "Formation IA générative — 5 au 7 août 2026",
+    "volume": "19 membres du personnel",
+    "detail": "Promoteur, Principal, Directrice, Vice-Principaux, Chef des Services, Secrétaire de Direction et enseignants des sections francophone et anglophone.",
+    "accord": true
+  },
+  {
+    "nom": "ODILIAS · Collège Les Fermions · ENIET Les Fermions · ENIEG Les Bosons",
+    "lieu": "Bafoussam, Cameroun",
+    "mission": "Formation IA générative + Excel gestion scolaire — 17 au 19 août 2026",
+    "volume": "38 membres du personnel, 4 établissements",
+    "detail": "Quatre établissements réunis sur une même mission. Direction, surveillance générale, secrétariat, économat, informatique et enseignants des deux sections linguistiques.",
+    "accord": false
+  }
+]

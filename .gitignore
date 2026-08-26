@@ -1,0 +1,29 @@
+# Sortie du build — regeneree par `npm run build`
+dist/
+
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+
+# Systeme
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editeurs
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+
+# Python (script de migration ponctuel)
+__pycache__/
+*.pyc
+
+# Fichiers locaux
+.env
+.env.local
+*.local
