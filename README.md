@@ -82,6 +82,7 @@ csa-web/
 | [docs/prompts-images-ia.md](docs/prompts-images-ia.md) | **Les 18 prompts à coller dans votre générateur d'images** |
 | [docs/04-deploiement.md](docs/04-deploiement.md) | Mettre en ligne, brancher le formulaire |
 | [docs/05-architecture.md](docs/05-architecture.md) | Comment le moteur fonctionne |
+| [docs/06-github-et-netlify.md](docs/06-github-et-netlify.md) | **Envoyer le projet sur GitHub et publier — pas à pas** |
 
 ---
 
