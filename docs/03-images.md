@@ -10,13 +10,38 @@ public/images/formations/acp-rstudio.jpg
 ```
 
 **Extensions acceptées**, par ordre de préférence :
-`.avif` · `.webp` · `.jpg` · `.jpeg` · `.png`
+`.avif` · `.webp` · `.jpg` · `.jpeg` · `.png` · `.svg`
 
 Si le fichier existe, il est utilisé. S'il n'existe pas, un bloc bleu aux
 couleurs CSA prend sa place, avec le nom de la formation. Le site n'est
 jamais cassé, jamais troué — mais il paraît inachevé.
 
 Le format attendu est **16:9 paysage**, idéalement 1600 × 900 pixels.
+
+---
+
+## Les 18 visuels d'attente en place
+
+Les 18 formations sont **déjà illustrées**, par les illustrations
+vectorielles produites pour CSA : variogramme, modèle de blocs, biplot ACP,
+panache de pollution, image satellite classifiée, fosse en gradins…
+
+| | |
+|---|---|
+| Poids des 18 réunies | **172 Ko** — moins qu'une seule image IA compressée |
+| Format | 16:9 exact (`viewBox="0 0 640 360"`) |
+| Palette | le bleu CSA du site |
+| Accessibilité | `role="img"` et titre descriptif sur chacune |
+
+C'est un choix assumé : pour un visiteur en 3G, 172 Ko contre 3 Mo change
+tout, et une illustration technique juste vaut mieux qu'une image de synthèse
+approximative.
+
+**`.svg` est volontairement en dernier dans l'ordre de préférence.** Le jour
+où vous déposez `isatis-neo.webp`, il passe devant `isatis-neo.svg` sans que
+vous ayez quoi que ce soit à supprimer ni à reconfigurer. Vous pouvez donc
+remplacer les visuels **un par un, à votre rythme**, en commençant par les
+formations qui vendent le plus.
 
 ---
 

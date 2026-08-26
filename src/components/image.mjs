@@ -20,8 +20,16 @@ import { join } from 'node:path';
 import { PUBLIC } from '../lib/chemins.mjs';
 import { esc } from '../lib/html.mjs';
 
-/** Extensions acceptees, par ordre de preference. */
-export const EXTENSIONS = ['avif', 'webp', 'jpg', 'jpeg', 'png'];
+/**
+ * Extensions acceptees, par ordre de preference.
+ *
+ * `svg` est volontairement EN DERNIER. Les 18 illustrations vectorielles de
+ * CSA servent de visuels d'attente : elles pesent 172 Ko a elles toutes, la
+ * ou une seule image IA compressee en pese 200. Le jour ou une vraie photo
+ * ou une image IA est deposee sous le meme identifiant en .webp, elle passe
+ * devant toute seule — rien a supprimer, rien a reconfigurer.
+ */
+export const EXTENSIONS = ['avif', 'webp', 'jpg', 'jpeg', 'png', 'svg'];
 
 const DOSSIER = join(PUBLIC, 'images', 'formations');
 
