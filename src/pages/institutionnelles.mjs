@@ -5,6 +5,7 @@ import { enligne } from '../lib/markdown.mjs';
 import { lienWhatsApp, enLettres } from '../lib/format.mjs';
 import { page } from '../components/layout.mjs';
 import { carteFormation, temoignages, filAriane } from '../components/blocs.mjs';
+import { sectionGalerie, photoMarque } from '../components/galerie.mjs';
 
 /* ══════════════════════════════════════════════════════════════════
    ACCUEIL
@@ -13,6 +14,7 @@ import { carteFormation, temoignages, filAriane } from '../components/blocs.mjs'
 export function pageAccueil(contenu) {
   const { site, formations, temoignages: avis, references } = contenu;
   const n = formations.length;
+  const ouverture = photoMarque('hero-accueil.webp');
 
   const chiffres = chaque(site.chiffres, (c) => `
         <div>
@@ -60,6 +62,12 @@ export function pageAccueil(contenu) {
            class="btn btn-secondaire btn-large" target="_blank" rel="noopener">
           Parler à un formateur</a>
       </div>
+      ${ouverture ? `
+      <figure class="hero-photo">
+        <img src="${ouverture}" width="1600" height="720"
+             alt="Équipe CSA en campagne de prospection sur le terrain"
+             fetchpriority="high" decoding="async">
+      </figure>` : ''}
     </div>
   </section>
 
@@ -300,7 +308,8 @@ export function pageServices(contenu) {
    ══════════════════════════════════════════════════════════════════ */
 
 export function pageAPropos(contenu) {
-  const { site, formateur, references } = contenu;
+  const { site, formateur, references, galerie } = contenu;
+  const portrait = photoMarque('formateur.webp');
 
   const logiciels = chaque(formateur.logiciels || [],
                            (l) => `<li>${esc(l)}</li>`);
@@ -348,6 +357,12 @@ export function pageAPropos(contenu) {
       <h2 class="section-titre">Le formateur</h2>
       <div class="grille grille-2">
         <div>
+          ${portrait ? `
+          <figure class="portrait">
+            <img src="${portrait}" width="640" height="800"
+                 alt="${esc(formateur.nom)} — ${esc(formateur.titre)}"
+                 loading="lazy" decoding="async">
+          </figure>` : ''}
           <h3>${esc(formateur.nom)}</h3>
           <p class="carte-meta">${esc(formateur.titre)}</p>
           <p>${esc(formateur.formation)}</p>
@@ -365,7 +380,9 @@ export function pageAPropos(contenu) {
     </div>
   </section>
 
-  <section class="section">
+  ${sectionGalerie(galerie, '', { classeSection: 'section' })}
+
+  <section class="section section-pale">
     <div class="conteneur">
       <h2 class="section-titre">Nos références</h2>
       <div class="grille grille-2">${clients}</div>

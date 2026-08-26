@@ -642,7 +642,80 @@ code {
 .bouton-wa-flottant:hover { transform: scale(1.07); }
 .bouton-wa-flottant svg { width: 30px; height: 30px; fill: var(--blanc); }
 
-/* ── 15. Accessibilite, responsive, impression ───────────────────── */
+/* ── 15. Photos reelles : ouverture, galerie, portrait ───────────── */
+/* Photos des campagnes CSA. Elles montrent des personnes reconnaissables
+   et ne sont publiees qu'avec leur accord. Pour en retirer une, supprimer
+   son entree de content/galerie.json — aucune retouche de style requise. */
+
+.hero-photo {
+  margin: 2.6rem auto 0;
+  max-width: 940px;
+  border-radius: var(--rayon);
+  overflow: hidden;
+  box-shadow: var(--ombre-forte);
+  line-height: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
+.galerie-item {
+  margin: 0;
+  background: var(--blanc);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.galerie-item:hover,
+.galerie-item:focus-within {
+  box-shadow: var(--ombre-forte);
+  transform: translateY(-2px);
+}
+
+.galerie-item img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  background: var(--gris-clair);
+}
+
+.galerie-item figcaption {
+  padding: .85rem 1rem 1rem;
+  font-size: .92rem;
+  line-height: 1.5;
+  color: var(--texte-doux);
+}
+
+.portrait {
+  margin: 0 0 1.3rem;
+  max-width: 260px;
+  border-radius: var(--rayon);
+  overflow: hidden;
+  box-shadow: var(--ombre);
+  line-height: 0;
+}
+
+.portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── 16. Accessibilite, responsive, impression ───────────────────── */
 .saut-contenu {
   position: absolute;
   left: -9999px;

@@ -1,0 +1,66 @@
+{
+  "titre": "CSA sur le terrain",
+  "intro": "Nos formations partent de campagnes réelles, menées par nos équipes et nos apprenants. Voici quelques-unes d'entre elles.",
+  "photos": [
+    {
+      "fichier": "terrain-inselberg.webp",
+      "legende": "Reconnaissance d'un massif granitique et de ses éboulis — campagne d'étude des chutes de blocs.",
+      "alt": "Colline granitique couverte de blocs rocheux sous un ciel dégagé"
+    },
+    {
+      "fichier": "terrain-equipe-ouest.webp",
+      "legende": "Équipe de prospection en fin de journée, région de l'Ouest Cameroun.",
+      "alt": "Trois géologues en gilets de sécurité et casques, accroupis sur une colline"
+    },
+    {
+      "fichier": "instrument-boussole.webp",
+      "legende": "La boussole de géologue : direction et pendage, le geste qui fonde toute carte structurale.",
+      "alt": "Boussole de géologue posée sur un sol latéritique"
+    },
+    {
+      "fichier": "instrument-gps.webp",
+      "legende": "Contrôle du GPS avant le départ. Une donnée mal localisée ne se rattrape pas au bureau.",
+      "alt": "GPS de terrain dans sa mallette de transport"
+    },
+    {
+      "fichier": "terrain-releve-gps.webp",
+      "legende": "Relevé de points de contrôle : la géomatique commence sur le terrain, pas devant l'écran.",
+      "alt": "Trois techniciens en gilets CSA consultant un récepteur GPS"
+    },
+    {
+      "fichier": "drone-decollage.webp",
+      "legende": "Décollage pour un levé photogrammétrique — la donnée que consommeront ensuite le SIG et les modèles.",
+      "alt": "Technicien lançant un drone quadrirotor"
+    },
+    {
+      "fichier": "drone-radiocommande.webp",
+      "legende": "Prise en main de la radiocommande, avec les étudiants de l'École de Géologie et d'Exploitation Minière.",
+      "alt": "Deux personnes en gilets CSA apprenant à piloter un drone"
+    },
+    {
+      "fichier": "salle-seance-travail.webp",
+      "legende": "Séance de travail : préparation de mission et dépouillement des relevés.",
+      "alt": "Séance de travail autour d'une table"
+    },
+    {
+      "fichier": "attestation-remise.webp",
+      "legende": "Remise d'une attestation de participation à l'issue d'une formation certifiante.",
+      "alt": "Remise d'une attestation CSA entre trois personnes"
+    },
+    {
+      "fichier": "promotion-etablissement.webp",
+      "legende": "Une promotion au complet, attestations en main, à l'issue d'une mission en établissement.",
+      "alt": "Groupe de participants présentant leurs attestations devant un établissement scolaire"
+    },
+    {
+      "fichier": "promotion-groupe.webp",
+      "legende": "Formation intra-établissement : direction, administration et enseignants formés ensemble.",
+      "alt": "Grand groupe de participants avec leurs attestations"
+    },
+    {
+      "fichier": "csa-kakemono.webp",
+      "legende": "« Former pour transformer l'Afrique » — la raison d'être de CSA, affichée à chaque mission.",
+      "alt": "Participant devant le kakémono de Consulting Sciences Academy"
+    }
+  ]
+}

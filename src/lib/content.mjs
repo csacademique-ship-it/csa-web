@@ -37,6 +37,16 @@ function lireJson(nom) {
   }
 }
 
+/**
+ * Lit un JSON facultatif. Renvoie `secours` si le fichier n'existe pas —
+ * mais signale quand meme une erreur si le fichier existe et qu'il est
+ * invalide : un fichier absent est un choix, un fichier casse est un bug.
+ */
+function lireJsonFacultatif(nom, secours) {
+  if (!existsSync(join(CONTENU, nom))) return secours;
+  return lireJson(nom);
+}
+
 function validerFormation(f, chemin) {
   const erreurs = [];
 
@@ -136,13 +146,15 @@ function chargerFormation(fichier) {
 
 /**
  * Charge tout le contenu du site.
- * @returns {{site, formations, categories, references, temoignages, formateur}}
+ * @returns {{site, formations, categories, references, temoignages, formateur,
+ *            galerie}}
  */
 export function chargerContenu() {
   const site = lireJson('site.json');
   const references = lireJson('references.json');
   const temoignages = lireJson('temoignages.json');
   const formateur = lireJson('formateur.json');
+  const galerie = lireJsonFacultatif('galerie.json', { photos: [] });
 
   const dossier = join(CONTENU, 'formations');
   const fichiers = readdirSync(dossier)
@@ -180,5 +192,7 @@ export function chargerContenu() {
     c.formations.push(f);
   }
 
-  return { site, formations, categories, references, temoignages, formateur };
+  return {
+    site, formations, categories, references, temoignages, formateur, galerie,
+  };
 }
