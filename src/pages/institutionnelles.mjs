@@ -11,6 +11,52 @@ import { sectionGalerie, photoMarque } from '../components/galerie.mjs';
    ACCUEIL
    ══════════════════════════════════════════════════════════════════ */
 
+/**
+ * Fiche d'identite de CSA pour les moteurs de recherche.
+ *
+ * Les fiches formation portent deja un schema `Course` ; celui-ci decrit
+ * l'organisme lui-meme. C'est ce qui permet a Google de rattacher toutes les
+ * pages a une meme entite plutot qu'a une collection de documents isolés.
+ *
+ * Les champs absolus (url, logo, image) n'apparaissent que si `domaine` est
+ * renseigne dans content/site.json : une URL relative dans un JSON-LD est
+ * ignoree par Google, autant ne rien ecrire.
+ */
+function schemaOrganisation(site, nbFormations) {
+  const base = site.domaine ? `https://${site.domaine}/` : '';
+
+  const donnees = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: site.nomComplet,
+    alternateName: site.nom,
+    slogan: site.slogan,
+    description: `Institut africain de formation, conseil, recherche et `
+      + `innovation en geosciences, mines, environnement et donnees. `
+      + `${nbFormations} formations en francais, sur des cas africains.`,
+    email: site.email,
+    telephone: `+${site.whatsapp}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'CM',
+      addressRegion: site.pays,
+    },
+    areaServed: {
+      '@type': 'Place',
+      name: 'Afrique francophone',
+    },
+    knowsLanguage: 'fr',
+  };
+
+  if (base) {
+    donnees.url = base;
+    donnees.logo = `${base}images/brand/logo-csa.png`;
+    donnees.image = `${base}images/brand/partage.jpg`;
+  }
+
+  return `<script type="application/ld+json">${JSON.stringify(donnees)}</script>`;
+}
+
 export function pageAccueil(contenu) {
   const { site, formations, temoignages: avis, references } = contenu;
   const n = formations.length;
@@ -165,6 +211,7 @@ export function pageAccueil(contenu) {
       + 'SIG, télédétection et données, pour les professionnels des géosciences '
       + "d'Afrique francophone.",
     corps,
+    schema: schemaOrganisation(site, n),
     actif: 'accueil',
     chemin: 'index.html',
     contenu,

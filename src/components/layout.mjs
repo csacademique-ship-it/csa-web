@@ -112,7 +112,13 @@ export function page(o) {
 <meta property="og:title" content="${esc(o.titre)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="${esc(site.nomComplet)}">
 <meta name="twitter:card" content="summary_large_image">
+${base && o.chemin ? `<meta property="og:url" content="${base}${o.chemin}">` : ''}
+${base ? `<meta property="og:image" content="${base}images/brand/partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(site.nomComplet)} — ${esc(site.slogan)}">` : ''}
 ${base && o.chemin ? `<link rel="canonical" href="${base}${o.chemin}">` : ''}
 <link rel="stylesheet" href="${prefixe}assets/css/csa.css">
 <link rel="icon" href="${prefixe}images/brand/favicon.png">
