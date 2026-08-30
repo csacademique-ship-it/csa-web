@@ -176,7 +176,20 @@ if (!existsSync(DIST)) {
 }
 
 const contenu = chargerContenu();
-const html = fichiers(DIST, (n) => n.endsWith('.html'));
+
+/**
+ * Fichiers de validation de propriete deposes par les moteurs de recherche
+ * (Google Search Console, Bing Webmaster). Ils portent l'extension .html mais
+ * ne contiennent qu'une ligne de texte : ni <html>, ni <title>, ni <h1>.
+ * Les controler comme des pages ferait echouer la CI, et les corriger les
+ * rendrait invalides — le moteur exige le fichier tel qu'il l'a fourni.
+ */
+const VALIDATION_MOTEURS = /^(google[0-9a-f]+|BingSiteAuth)\.html$/;
+
+const html = fichiers(DIST, (n) => n.endsWith('.html'))
+  .filter((chemin) => !VALIDATION_MOTEURS.test(
+    relative(DIST, chemin).split(/[\\/]/).join('/'),
+  ));
 const pages = [];
 
 for (const chemin of html) {

@@ -6,6 +6,12 @@
 
 * text=auto eol=lf
 
+# Fichiers de validation des moteurs de recherche : servis tels quels.
+# Google verifie le contenu exact ; une conversion de fin de ligne, ou un
+# saut de ligne ajoute, suffit a faire echouer la validation du site.
+google*.html -text
+BingSiteAuth.xml -text
+
 # Fichiers binaires : ne jamais y toucher.
 *.png binary
 *.jpg binary
